@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
@@ -18,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html suppressHydrationWarning lang="en" className="h-full">
       <body
         className={cn(
-          " relative transition-colors antialiased h-full duration-300",
+          " relative transition-colors overflow-x-hidden max-w-screen-2xl antialiased h-full duration-300",
           sans.variable,
           sans.className,
           GeistSans.variable
@@ -30,6 +31,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

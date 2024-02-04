@@ -23,6 +23,7 @@ const config = {
         sans: ['var(--font-montserrat)'],
       },
       colors: {
+        lblue:"#4A19C4",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
